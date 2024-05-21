@@ -1,0 +1,40 @@
+header{
+    width: 100%;
+    height: auto;
+    background-color: rgba(41, 41, 41, 0.5);
+    color: white;
+    padding: 30px 10%;
+}
+.header__footer, .header__contacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;
+    gap: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+a:hover{
+    color: greenyellow;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+}
+a:hover::after{
+    width: 100%;
+}
+a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: greenyellow;
+    transition-duration: 0.2s;
+}

@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+
+{% block content %}
+
+    <main class="game-pc__item">
+        <div class="item__text">
+            <h1>{{item.title}}</h1>
+            <p>{{item.body}}</p>
+            <h2>Цена: {{item.price}}</h2>
+            <a href="{% url 'game-pc' %}">Назад</a>
+        </div>
+        <div class="item__img">
+            <img src="../static/main/img/{{item.img}}" alt="">
+        </div>
+
+    </main>
+
+{% endblock %}

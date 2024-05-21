@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+
+{% block content %}
+
+    <main class="game-pc">
+        {% for element in posts %}
+        <div class="card">
+            <div class="card__img">
+                <a href="/game-pc/{{element.id}}"><img src="static/main/img/{{element.img}}" alt=""></a>
+            </div>
+            <div class="card__text">
+                <h2>{{element.title}}</h2>
+                <p>{{element.body}} </p>
+                <h3>Цена: {{element.price}} ₽</h3>
+                <a href="/game-pc/{{element.id}}">Подробнее</a>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+
+{% endblock %}
